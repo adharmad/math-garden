@@ -16,6 +16,10 @@ def main(limit):
         for b in range(a, limit+1):
             if is_pythagorean_triplet(a, b):
                 c = int(math.sqrt(a*a + b*b))
+
+                if c > limit:
+                    continue
+
                 print("{0}, {1}, {2}".format(a, b, c))
 
 if __name__ == '__main__':

@@ -21,7 +21,7 @@ def main(limit):
     for i in range(2, limit):
         factors = factorize(i)
         #print (str(i) + ' --> ' + str(factors))
-        
+
         sum_of_factors = functools.reduce((lambda x, y: x+y), factors)
 
         if sum_of_factors == i:
