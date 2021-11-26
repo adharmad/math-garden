@@ -46,6 +46,9 @@ def getPrimeDiff(n):
     return diffMap
 
 def isPowerOfTwo(n):
+    """
+    Check if a number that is a power of two
+    """
     log = math.log(n, 2)
     power = math.pow(2, round(log))
 
@@ -53,3 +56,20 @@ def isPowerOfTwo(n):
         return True
     else:
         return False
+
+def getFibonnaci(n):
+    """Returns a list of the first n fibonnaci numbers."""
+    lst = []
+    curr = 0
+    nxt = 1
+    n = n - 2
+    lst.append(curr)
+    lst.append(nxt)
+
+    while n >= 0:
+        curr, nxt = nxt, curr+nxt
+        lst.append(nxt)
+
+        n = n - 1
+
+    return lst
