@@ -57,11 +57,16 @@ def isPowerOfTwo(n):
     else:
         return False
 
-def getFibonnaci(n):
-    """Returns a list of the first n fibonnaci numbers."""
+def getAdditiveSequence(n, first, second):
+    """
+    Get the values of an integer sequence which is additive i.e.
+    the next number is the sum of the previous two.
+    eg - With seed 0 and 1, we have the Fibonnaci numbers
+    and with seed 2 and 1, we have the Luacs numbers
+    """
     lst = []
-    curr = 0
-    nxt = 1
+    curr = first
+    nxt = second
     n = n - 2
     lst.append(curr)
     lst.append(nxt)
@@ -73,3 +78,12 @@ def getFibonnaci(n):
         n = n - 1
 
     return lst
+
+def getFibonnaci(n):
+    """Returns a list of the first n fibonnaci numbers."""
+    return getAdditiveSequence(n, 0, 1)
+
+
+def getLucas(n):
+    """Returns a list of the first n Lucas numbers."""
+    return getAdditiveSequence(n, 2, 1)
