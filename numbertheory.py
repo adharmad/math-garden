@@ -87,3 +87,12 @@ def getFibonnaci(n):
 def getLucas(n):
     """Returns a list of the first n Lucas numbers."""
     return getAdditiveSequence(n, 2, 1)
+
+def factorize(num):
+    factors = []
+
+    for i in range(1, int(num/2)+1):
+        if num % i == 0:
+            factors += [i]
+
+    return factors
