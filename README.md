@@ -1,6 +1,8 @@
-# Number Theory
+# Math Garden
 
-Some random scripts for various explorations in number theory
+Some random scripts for various explorations in math
+
+## Number Theory
 
 * path-to-kaprekar.py: Prints out Kaprekar constant path for argument
 * kaprekar-constant-fixed-point.py: Kaprepar fixed point for 4-digit numbers
